@@ -15,11 +15,9 @@ repositories {
 
 android {
     namespace "com.doublelotuscorp.slidingemojikeyboard"
-    compileSdkVersion 25
-
     defaultConfig {
         minSdkVersion 11
-        targetSdkVersion 25
+        targetSdkVersion 28
         versionCode 10
         versionName "2.0.0"
     }
@@ -47,10 +45,9 @@ android {
     lintOptions {
         abortOnError false
     }
-    buildToolsVersion '34.0.0'
 }
 
 dependencies {
-    implementation 'com.android.support:support-v4:25.0.1'
+    implementation 'com.android.support:support-v4:25.4.0'
     implementation 'com.astuetz:pagerslidingtabstrip:1.0.1'
 }
