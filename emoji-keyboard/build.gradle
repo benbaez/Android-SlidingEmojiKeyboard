@@ -1,9 +1,10 @@
 buildscript {
     repositories {
         mavenCentral()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.android.tools.build:gradle:8.2.1'
     }
 }
 apply plugin: 'com.android.application'
@@ -13,8 +14,8 @@ repositories {
 }
 
 android {
+    namespace "com.doublelotuscorp.slidingemojikeyboard"
     compileSdkVersion 25
-    buildToolsVersion "25.0.1"
 
     defaultConfig {
         minSdkVersion 11
@@ -39,12 +40,17 @@ android {
             debuggable true
         }
     }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
     lintOptions {
         abortOnError false
     }
+    buildToolsVersion '34.0.0'
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:25.0.1'
-    compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+    implementation 'com.android.support:support-v4:25.0.1'
+    implementation 'com.astuetz:pagerslidingtabstrip:1.0.1'
 }
